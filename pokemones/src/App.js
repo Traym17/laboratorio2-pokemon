@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SelectPokemon from './components/SelectPokemon';
+import BtnSeleccionar from './components/BtnSeleccionar';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
       <div>
           <SelectPokemon id='select1' name='select1'/>
           <SelectPokemon id='select2' name='select2'/>
+        </div>
+        <div>
+          <BtnSeleccionar/>
         </div>
       </header>
     </div>
