@@ -8,6 +8,7 @@ const SelectPokemon=(props)=>{
     let nombres=await fetch(urlFetch, {method:'GET'});
     let pokemonesRes= await nombres.json();
     setPokemones(pokemonesRes.results);
+    console.log(pokemonesRes);
    }
       
     let options = [];
@@ -24,7 +25,7 @@ const SelectPokemon=(props)=>{
         <select id={props.id}>
             {
                 pokemones.map((pokemon)=>{
-                    console.log(pokemon.name);
+                   //console.log(pokemon);
                     return <option value={pokemon.url}>{pokemon.name}</option>
                 })
             }

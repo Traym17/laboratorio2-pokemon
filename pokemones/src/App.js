@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SelectPokemon from './components/SelectPokemon';
 import BtnSeleccionar from './components/BtnSeleccionar';
+import ImagePokemon from './components/ImagePokemon';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </div>
         <div>
           <BtnSeleccionar/>
+        </div>
+        <div>
+          <ImagePokemon/>
         </div>
       </header>
     </div>
