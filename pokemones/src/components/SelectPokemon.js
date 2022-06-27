@@ -8,7 +8,6 @@ const SelectPokemon=(props)=>{
     let nombres=await fetch(urlFetch, {method:'GET'});
     let pokemonesRes= await nombres.json();
     setPokemones(pokemonesRes.results);
-    console.log(pokemonesRes);
    }
       
     let options = [];
@@ -17,7 +16,6 @@ const SelectPokemon=(props)=>{
     })
 
     useEffect(()=>{
-      //console.log('entreeee');
       fetchP();
     },[])
 

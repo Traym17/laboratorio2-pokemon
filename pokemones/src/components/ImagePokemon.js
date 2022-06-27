@@ -1,6 +1,6 @@
-const ImagePokemon=()=>{
+const ImagePokemon=(props)=>{
     return(
-        <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png'} />
+        <img src={props.url} />
     );
 
 }

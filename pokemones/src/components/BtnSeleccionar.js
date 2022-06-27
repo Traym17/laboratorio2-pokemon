@@ -1,6 +1,6 @@
-const BtnSeleccionar=()=>{
+const BtnSeleccionar=(props)=>{
     return(
-        <button onClick={'cargarImagenes'}>Seleccionar Pokemon</button>
+        <button onClick={props.funcion}>Seleccionar Pokemon</button>
     );
 
 }
