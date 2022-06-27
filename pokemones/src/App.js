@@ -6,16 +6,24 @@ import ImagePokemon from './components/ImagePokemon';
 import React, { useEffect, useState } from 'react';
 
 function App() {
-  const [poke1, setPokemon1] = useState("");
-  const [poke2, setPokemon2] = useState("");
+  const [poke1, setPoke1] = useState("");
+  const [poke2, setPoke2] = useState("");
 
   const cargarImagen = async () => {
+    //pokemon1
     let pokemon1=document.getElementById('select1').value;
-    let pokemon2=document.getElementById('select2').value;
     let propiedadesP1=await fetch(pokemon1,{method:'GET'});
     propiedadesP1=await propiedadesP1.json();
-    poke1.img=propiedadesP1.sprites.front_default;
-    console.log(poke1);
+    propiedadesP1.img=propiedadesP1.sprites.front_default;
+    //pokemon2
+    let pokemon2=document.getElementById('select2').value;
+    let propiedadesP2=await fetch(pokemon2,{method:'GET'});
+    propiedadesP2=await propiedadesP2.json();
+    propiedadesP2.img=propiedadesP2.sprites.front_default;
+
+    setPoke1(propiedadesP1);
+    setPoke2(propiedadesP2);
+    console.log('ddd');
   }
 
   return (
@@ -29,7 +37,9 @@ function App() {
           <BtnSeleccionar funcion={cargarImagen}/>
         </div>
         <div>
-          <ImagePokemon url='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png'/>
+          {console.log(poke1.img)}
+          <ImagePokemon url={poke1.img}/>
+          <ImagePokemon url={poke2.img}/>
         </div>
       </header>
     </div>
